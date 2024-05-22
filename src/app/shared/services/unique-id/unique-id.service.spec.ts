@@ -7,8 +7,7 @@ describe(UniqueIdService.name, () => {
         const service = new UniqueIdService();
         const idWithPrefix = service.generateUniqueIdWithPrefix('APP');
 
-        expect(idWithPrefix).toContain('APP-');
-
+        expect(idWithPrefix.startsWith('APP-')).toBeTrue();
     });
 
 });
