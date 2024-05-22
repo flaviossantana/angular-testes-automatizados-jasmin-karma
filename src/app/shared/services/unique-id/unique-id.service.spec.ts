@@ -1,8 +1,8 @@
 import {UniqueIdService} from "./unique-id.service";
 
-describe('UniqueIdService', () => {
+describe(UniqueIdService.name, () => {
 
-    it('Deveria gerar um ID unicio quando forma chamado', () => {
+    it(`#${UniqueIdService.prototype.getNumberOfGeneratedUniqueIds.name} Deveria gerar um ID unicio quando forma chamado`, () => {
 
         const service = new UniqueIdService();
         const idWithPrefix = service.generateUniqueIdWithPrefix('APP');
