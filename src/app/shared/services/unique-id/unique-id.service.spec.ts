@@ -1,10 +1,13 @@
+import {UniqueIdService} from "./unique-id.service";
+
 describe('UniqueIdService', () => {
 
-    it('Deveria cobrir o primeiro cenario', () => {
+    it('Deveria gerar um ID unicio quando forma chamado', () => {
 
-    });
+        const service = new UniqueIdService();
+        const idWithPrefix = service.generateUniqueIdWithPrefix('APP');
 
-    it('Deveria cobrir o segundo cenario', () => {
+        expect(idWithPrefix).toContain('APP-');
 
     });
 
