@@ -2,7 +2,7 @@ import {UniqueIdService} from "./unique-id.service";
 
 describe(UniqueIdService.name, () => {
 
-    it(`#${UniqueIdService.prototype.getNumberOfGeneratedUniqueIds.name} Deveria gerar um ID unicio quando forma chamado`, () => {
+    it(`#${UniqueIdService.prototype.getNumberOfGeneratedUniqueIds.name} Deveria gerar um ID unico quando forma chamado`, () => {
 
         const service = new UniqueIdService();
         const idWithPrefix = service.generateUniqueIdWithPrefix('APP');
@@ -10,7 +10,7 @@ describe(UniqueIdService.name, () => {
         expect(idWithPrefix.startsWith('APP-')).toBeTrue();
     });
 
-    it(`#${UniqueIdService.prototype.getNumberOfGeneratedUniqueIds.name} Deveria gerar um ID unicio quando chamado varias vezes`, () => {
+    it(`#${UniqueIdService.prototype.getNumberOfGeneratedUniqueIds.name} Deveria gerar um ID unico quando chamado varias vezes`, () => {
 
         const service = new UniqueIdService();
         const firstID = service.generateUniqueIdWithPrefix('APP');
@@ -29,6 +29,17 @@ describe(UniqueIdService.name, () => {
         }
 
         expect(ids.size).toBe(50)
+    });
+
+    it(`#${UniqueIdService.prototype.getNumberOfGeneratedUniqueIds.name} Deveria retornar a quantidade de Id´s gerados`, () => {
+
+        const service = new UniqueIdService();
+
+        service.generateUniqueIdWithPrefix('APP');
+        service.generateUniqueIdWithPrefix('APP');
+
+        expect(service.getNumberOfGeneratedUniqueIds()).toBe(2);
+
     });
 
 });
