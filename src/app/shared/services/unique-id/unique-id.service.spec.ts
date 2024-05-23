@@ -8,14 +8,16 @@ describe(UniqueIdService.name, () => {
         service = new UniqueIdService();
     })
 
-    it(`#${UniqueIdService.prototype.getNumberOfGeneratedUniqueIds.name} Deveria gerar um ID unico quando forma chamado`, () => {
+    it(`#${UniqueIdService.prototype.getNumberOfGeneratedUniqueIds.name} 
+    Deveria gerar um ID unico quando forma chamado`, () => {
 
         const idWithPrefix = service.generateUniqueIdWithPrefix('APP');
 
         expect(idWithPrefix.startsWith('APP-')).toBeTrue();
     });
 
-    it(`#${UniqueIdService.prototype.getNumberOfGeneratedUniqueIds.name} Deveria gerar um ID unico quando chamado varias vezes`, () => {
+    it(`#${UniqueIdService.prototype.getNumberOfGeneratedUniqueIds.name} 
+    Deveria gerar um ID unico quando chamado varias vezes`, () => {
 
         const firstID = service.generateUniqueIdWithPrefix('APP');
         const secondID = service.generateUniqueIdWithPrefix('APP');
@@ -23,7 +25,8 @@ describe(UniqueIdService.name, () => {
         expect(firstID).not.toBe(secondID);
     });
 
-    it(`#${UniqueIdService.prototype.getNumberOfGeneratedUniqueIds.name} Deveria gerar um ID unicos quando chamado N vezes`, () => {
+    it(`#${UniqueIdService.prototype.getNumberOfGeneratedUniqueIds.name} 
+    Deveria gerar um ID unicos quando chamado N vezes`, () => {
 
         const ids = new Set();
         for (let i = 0; i < 50; i++) {
@@ -33,13 +36,22 @@ describe(UniqueIdService.name, () => {
         expect(ids.size).toBe(50)
     });
 
-    it(`#${UniqueIdService.prototype.getNumberOfGeneratedUniqueIds.name} Deveria retornar a quantidade de Id´s gerados`, () => {
-        
+    it(`#${UniqueIdService.prototype.getNumberOfGeneratedUniqueIds.name} 
+    Deveria retornar a quantidade de Id´s gerados`, () => {
+
         service.generateUniqueIdWithPrefix('APP');
         service.generateUniqueIdWithPrefix('APP');
 
         expect(service.getNumberOfGeneratedUniqueIds()).toBe(2);
+    });
 
+    it(`#${UniqueIdService.prototype.getNumberOfGeneratedUniqueIds.name} 
+    Deveria tratar prefixo vazio`, () => {
+
+        [null, '', undefined]
+            .forEach(valorInvalido => {
+                expect(() => service.generateUniqueIdWithPrefix(valorInvalido)).toThrow();
+            })
     });
 
 });
