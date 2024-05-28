@@ -56,4 +56,15 @@ describe(UniqueIdService.name, () => {
             })
     });
 
+
+    it(`#${UniqueIdService.prototype.getNumberOfGeneratedUniqueIds.name} 
+    Deveria testar valores boleanos`, () => {
+
+        expect(true).toBeTrue();
+        expect(true).toBe(true);
+        expect(false).toBeFalse();
+        expect(Boolean(true)).toBeTruthy();
+
+    });
+
 });
