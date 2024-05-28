@@ -48,9 +48,11 @@ describe(UniqueIdService.name, () => {
     it(`#${UniqueIdService.prototype.getNumberOfGeneratedUniqueIds.name} 
     Deveria tratar prefixo vazio`, () => {
 
-        [null, '', undefined]
+        [null, '', undefined, '1', '0']
             .forEach(valorInvalido => {
-                expect(() => service.generateUniqueIdWithPrefix(valorInvalido)).toThrow();
+                expect(() => service.generateUniqueIdWithPrefix(valorInvalido))
+                    .withContext(`Valor vazio: ${valorInvalido}` )
+                    .toThrow();
             })
     });
 
