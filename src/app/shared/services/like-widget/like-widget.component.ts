@@ -10,7 +10,7 @@ import {UniqueIdService} from "../unique-id/unique-id.service";
 })
 export class LikeWidgetComponent implements OnInit {
 
-    @Output() public liked = new EventEmitter<void>();
+    @Output() public liked = new EventEmitter();
     @Input() public likes = 0;
     @Input() public id = null;
 
@@ -28,6 +28,6 @@ export class LikeWidgetComponent implements OnInit {
     }
 
     like(): void {
-        this.liked.emit();
+        this.liked.emit('like', this.id);
     }
 }
