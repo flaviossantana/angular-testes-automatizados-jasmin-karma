@@ -1,5 +1,4 @@
-import {Component, Input, OnInit, Output} from '@angular/core';
-import {EventEmitter} from "protractor";
+import {Component,EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {faThumbsUp} from '@fortawesome/free-solid-svg-icons';
 import {UniqueIdService} from "../unique-id/unique-id.service";
 
@@ -10,7 +9,7 @@ import {UniqueIdService} from "../unique-id/unique-id.service";
 })
 export class LikeWidgetComponent implements OnInit {
 
-    @Output() public liked = new EventEmitter();
+    @Output() public liked = new EventEmitter<void>();
     @Input() public likes = 0;
     @Input() public id = null;
 
