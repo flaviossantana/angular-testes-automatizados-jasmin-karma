@@ -1,5 +1,4 @@
-import {Component, Input, OnInit, Output} from '@angular/core';
-import {EventEmitter} from "protractor";
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
     selector: 'app-like-widget',
