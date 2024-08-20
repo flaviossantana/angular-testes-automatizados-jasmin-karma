@@ -23,19 +23,19 @@ describe(LikeWidgetComponent.name, () => {
         expect(component).toBeTruthy();
     });
 
-    it('Should auto generate ID when id input property is missing', () => {
+    it('Should auto-generate ID during ngOnInput when (@Input id) is not assigned', () => {
       fixture.detectChanges();
       expect(component.id).toBeTruthy()
     });
 
-    it('Should NOT auto generate ID when id input property is missing', () => {
+    it('Should NOT auto-generate ID during ngOnInit when (@Input id) is assigned', () => {
         const someID = 'someID';
         component.id = someID;
         fixture.detectChanges();
         expect(component.id).toBe(someID)
     });
 
-    it(`#${LikeWidgetComponent.prototype.like.name} should trigger emission when called`,  () => {
+    it(`#${LikeWidgetComponent.prototype.like.name} should trigger (@Output liked) when called`,  () => {
         spyOn(component.liked, 'emit');
         fixture.detectChanges();
         component.like();
