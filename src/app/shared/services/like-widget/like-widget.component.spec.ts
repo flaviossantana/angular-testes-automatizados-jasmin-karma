@@ -22,4 +22,9 @@ describe(LikeWidgetComponent.name, () => {
         component = fixture.componentInstance;
         expect(component).toBeTruthy();
     });
+
+    it('Should auto generate ID when id input property is missing', () => {
+      component = fixture.componentInstance;
+      expect(component.id).toBeTruthy()
+    });
 });
