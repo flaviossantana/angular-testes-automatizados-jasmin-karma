@@ -15,26 +15,32 @@ describe(LikeWidgetComponent.name, () => {
             .compileComponents();
 
         fixture = TestBed.createComponent(LikeWidgetComponent);
+        component = fixture.componentInstance;
 
     });
 
     it('should create', () => {
-        component = fixture.componentInstance;
         expect(component).toBeTruthy();
     });
 
     it('Should auto generate ID when id input property is missing', () => {
-      component = fixture.componentInstance;
       fixture.detectChanges();
       expect(component.id).toBeTruthy()
     });
 
     it('Should NOT auto generate ID when id input property is missing', () => {
-        const component = fixture.componentInstance;
         const someID = 'someID';
         component.id = someID;
         fixture.detectChanges();
         expect(component.id).toBe(someID)
+    });
+
+    it(`#${LikeWidgetComponent.prototype.like.name} should trigger emission when called`, () => {
+        fixture.detectChanges();
+        component.liked.subscribe(() => {
+            expect(true).toBeTrue();
+        })
+        component.like()
     });
 
 });
