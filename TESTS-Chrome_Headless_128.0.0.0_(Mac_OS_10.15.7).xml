@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome Headless 128.0.0.0 (Mac OS 10.15.7)" package="" timestamp="2024-09-02T22:20:26" id="0" hostname="MacBook-Pro.local" tests="10" errors="0" failures="0" time="0.061">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/128.0.0.0 Safari/537.36"/>
+  </properties>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds &#xA;    Deveria retornar a quantidade de Id´s gerados" time="0.022" classname="Chrome_Headless_128_0_0_0_(Mac_OS_10_15_7).UniqueIdService"/>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds &#xA;    Deveria tratar prefixo vazio" time="0" classname="Chrome_Headless_128_0_0_0_(Mac_OS_10_15_7).UniqueIdService"/>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds &#xA;    Deveria testar valores boleanos" time="0.001" classname="Chrome_Headless_128_0_0_0_(Mac_OS_10_15_7).UniqueIdService"/>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds &#xA;    Deveria gerar um ID unicos quando chamado N vezes" time="0.001" classname="Chrome_Headless_128_0_0_0_(Mac_OS_10_15_7).UniqueIdService"/>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds &#xA;    Deveria gerar um ID unico quando forma chamado" time="0.001" classname="Chrome_Headless_128_0_0_0_(Mac_OS_10_15_7).UniqueIdService"/>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds &#xA;    Deveria gerar um ID unico quando chamado varias vezes" time="0" classname="Chrome_Headless_128_0_0_0_(Mac_OS_10_15_7).UniqueIdService"/>
+  <testcase name="LikeWidgetComponent #like should trigger (@Output liked) when called" time="0.023" classname="Chrome_Headless_128_0_0_0_(Mac_OS_10_15_7).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should NOT auto-generate ID during ngOnInit when (@Input id) is assigned" time="0.005" classname="Chrome_Headless_128_0_0_0_(Mac_OS_10_15_7).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent should create" time="0.005" classname="Chrome_Headless_128_0_0_0_(Mac_OS_10_15_7).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should auto-generate ID during ngOnInput when (@Input id) is not assigned" time="0.003" classname="Chrome_Headless_128_0_0_0_(Mac_OS_10_15_7).LikeWidgetComponent"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

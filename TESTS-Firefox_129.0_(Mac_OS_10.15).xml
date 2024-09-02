@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<testsuite name="Firefox 129.0 (Mac OS 10.15)" package="" timestamp="2024-09-02T22:20:25" id="0" hostname="MacBook-Pro.local" tests="10" errors="0" failures="0" time="0.049">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:129.0) Gecko/20100101 Firefox/129.0"/>
+  </properties>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds &#xA;    Deveria retornar a quantidade de Id´s gerados" time="0.011" classname="Firefox_129_0_(Mac_OS_10_15).UniqueIdService"/>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds &#xA;    Deveria tratar prefixo vazio" time="0" classname="Firefox_129_0_(Mac_OS_10_15).UniqueIdService"/>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds &#xA;    Deveria testar valores boleanos" time="0" classname="Firefox_129_0_(Mac_OS_10_15).UniqueIdService"/>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds &#xA;    Deveria gerar um ID unico quando forma chamado" time="0.001" classname="Firefox_129_0_(Mac_OS_10_15).UniqueIdService"/>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds &#xA;    Deveria gerar um ID unico quando chamado varias vezes" time="0" classname="Firefox_129_0_(Mac_OS_10_15).UniqueIdService"/>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds &#xA;    Deveria gerar um ID unicos quando chamado N vezes" time="0.001" classname="Firefox_129_0_(Mac_OS_10_15).UniqueIdService"/>
+  <testcase name="LikeWidgetComponent should create" time="0.012" classname="Firefox_129_0_(Mac_OS_10_15).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should auto-generate ID during ngOnInput when (@Input id) is not assigned" time="0.008" classname="Firefox_129_0_(Mac_OS_10_15).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should NOT auto-generate ID during ngOnInit when (@Input id) is assigned" time="0.008" classname="Firefox_129_0_(Mac_OS_10_15).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent #like should trigger (@Output liked) when called" time="0.008" classname="Firefox_129_0_(Mac_OS_10_15).LikeWidgetComponent"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
