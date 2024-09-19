@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
-  selector: 'app-photo-frame',
-  templateUrl: './photo-frame.component.html',
-  styleUrls: ['./photo-frame.component.scss']
+    selector: 'app-photo-frame',
+    templateUrl: './photo-frame.component.html',
+    styleUrls: ['./photo-frame.component.scss']
 })
-export class PhotoFrameComponent implements OnInit {
+export class PhotoFrameComponent {
 
-  constructor() { }
+    @Input() descricao: '';
+    @Input() source: '';
+    @Input() likes: 0;
 
-  ngOnInit(): void {
-  }
+    @Output() liked: EventEmitter<void> = new EventEmitter();
+
+
+    like(): void {
+        this.liked.emit();
+    }
 
 }
