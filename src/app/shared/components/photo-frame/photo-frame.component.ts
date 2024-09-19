@@ -7,9 +7,9 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class PhotoFrameComponent {
 
-    @Input() descricao: '';
-    @Input() source: '';
-    @Input() likes: 0;
+    @Input() descricao = '';
+    @Input() source = '';
+    @Input() likes = 0;
 
     @Output() liked: EventEmitter<void> = new EventEmitter();
 
