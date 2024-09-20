@@ -1,4 +1,6 @@
 <app-photo-frame
+        [likes]="likes"
         descricao="Alguma Descrição"
-        source="https://picsum.photos/400/600">
+        source="https://picsum.photos/400/600"
+        (liked)="like()">
 </app-photo-frame>

@@ -3,12 +3,11 @@
             tabindex="0"
             class="photo"
             [alt]="descricao"
-            [src]="source"
-    >
+            [src]="source">
     <div class="like-bar">
         <app-like-widget
                 [likes]="likes"
-                (liked)="like()"
-        ></app-like-widget>
+                (liked)="like()">
+        </app-like-widget>
     </div>
 </div>
