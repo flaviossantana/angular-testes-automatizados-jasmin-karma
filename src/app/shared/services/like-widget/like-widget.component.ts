@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {faThumbsUp} from '@fortawesome/free-solid-svg-icons';
-import {UniqueIdService} from "../unique-id/unique-id.service";
+import {UniqueIdService} from '../unique-id/unique-id.service';
 
 @Component({
     selector: 'app-like-widget',
@@ -22,7 +22,8 @@ export class LikeWidgetComponent implements OnInit {
 
     ngOnInit(): void {
         if (!this.id) {
-            this.id = this.uniqueIdService.generateUniqueIdWithPrefix('like-widget')
+            this.id = this.uniqueIdService.generateUniqueIdWithPrefix('like-widget');
+            this.fonts.faThumbsUp;
         }
     }
 
